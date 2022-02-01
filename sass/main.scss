@@ -2,12 +2,15 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-grey-dark: #777;
+$color-white: #fff;
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
@@ -19,8 +22,10 @@ body {
   font-weight: 400;
   /*font-size:16px;*/
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
+
+  box-sizing: border-box;
 }
 
 .header {
@@ -57,7 +62,7 @@ body {
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
 
   backface-visibility: hidden;
@@ -151,17 +156,17 @@ body {
 
 .btn:hover {
   transform: translateY(-.3rem);
-  box-shadow:  0 1rem 2rem rgb(0,0,0,.2);
+  box-shadow:  0 1rem 2rem #00000033;
 }
 
 .btn:active {
    transform: translateY(-.1rem);
-   box-shadow:  0 .5rem 1rem rgb(0,0,0,.2);
+   box-shadow:  0 .5rem 1rem #00000033;
 }
 
 .btn-white {
-  background-color: #fff;
-  color: #777;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
 .btn::after {
@@ -178,7 +183,7 @@ body {
 }
 
 .btn-white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 .btn:hover::after {
